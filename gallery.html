@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niji 6 sref seeds - Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .item {
+            border: 1px solid var(--secondary-bg-color);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            background-color: #222;
+        }
+        .item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 121, 198, 0.2);
+        }
+        .item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .seed {
+            background-color: rgba(51, 51, 51, 0.9);
+            padding: 10px;
+            text-align: center;
+            color: var(--accent-color);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .seed:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        .overlay-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+        }
+        .overlay-image {
+            max-width: 90%;
+            max-height: 80vh;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+        .overlay-seed {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: var(--secondary-bg-color);
+            color: var(--accent-color);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .overlay-seed:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+        .close-button {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: var(--text-color);
+            cursor: pointer;
+            z-index: 1001;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .nav-buttons button {
+            background-color: var(--secondary-bg-color);
+            color: var(--text-color);
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .nav-buttons button:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Niji 6 sref seeds</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Niji 6 sref seeds gallery</a>
+    </nav>
+    <div class="gallery" id="gallery"></div>
+    <div class="overlay" id="overlay">
+        <span class="close-button" onclick="closeOverlay()">&times;</span>
+        <div class="overlay-content" id="overlayContent"></div>
+        <div class="nav-buttons">
+            <button onclick="navigateImage(-1)">Previous</button>
+            <button onclick="navigateImage(1)">Next</button>
+        </div>
+    </div>
+
+    <script src="gallery.js"></script>
+</body>
+</html>
