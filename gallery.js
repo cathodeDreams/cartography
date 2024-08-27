@@ -59,6 +59,9 @@ const images = [
     { url: 'https://cdn.midjourney.com/11df336c-93ac-4102-b07a-636a9cf4c14e/0_2.png', seed: '3982789131' },
     { url: 'https://cdn.midjourney.com/4621cafa-f5fe-4c6e-8b21-f1cbd92309ef/0_2.png', seed: '4053834558' },
     { url: 'https://cdn.midjourney.com/f0bafeeb-d357-4498-9159-6f9c9f1888c2/0_0.png', seed: '4263820066' },
+    { url: 'https://cdn.midjourney.com/a214c68d-96a1-4fd4-aa41-4384bf13c02a/0_0.png', seed: '3383543770' },
+    { url: 'https://cdn.midjourney.com/547e20f8-7438-4c02-9842-059d0fe51512/0_0.png', seed: '2830365873' },
+    { url: 'https://cdn.midjourney.com/66e61994-5243-4102-86f5-8d882be17f64/0_2.png', seed: '1891966879' },
 ];
 
 // Sort the images array by seed value
