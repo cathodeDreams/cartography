@@ -54,6 +54,7 @@ const images = [
     { url: 'https://cdn.midjourney.com/76cdddae-6ff8-409d-82b0-a1ccc16ea72f/0_3.png', seed: '3612442817' },
     { url: 'https://cdn.midjourney.com/059b14e3-ddd9-45f5-8ca6-013d79154e08/0_1.png', seed: '3740541509' },
     { url: 'https://cdn.midjourney.com/83c42d31-c774-4578-bf4f-e7902ce2f632/0_2.png', seed: '3783083362' },
+    { url: 'https://cdn.midjourney.com/c0aa5e49-b5f6-4fd1-aadc-0faa8ac9c853/0_2.png', seed: '3785394014' },
     { url: 'https://cdn.midjourney.com/11c774cf-3387-4534-9bbe-3314fe5888d1/0_1.png', seed: '3843977434' },
     { url: 'https://cdn.midjourney.com/71ede89a-7a28-4e76-8c4d-aced3d56bb5b/0_1.png', seed: '3902411986' },
     { url: 'https://cdn.midjourney.com/11df336c-93ac-4102-b07a-636a9cf4c14e/0_2.png', seed: '3982789131' },
