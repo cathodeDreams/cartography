@@ -106,13 +106,27 @@ function copySeed(event, seed) {
         .catch(err => console.error('Failed to copy: ', err));
 }
 
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keydown', handleKeyDown);
+document.addEventListener('wheel', handleWheel);
+
+function handleKeyDown(e) {
     if (overlay.style.display === 'block') {
         if (e.key === 'Escape') closeOverlay();
         if (e.key === 'ArrowLeft') navigateImage(-1);
         if (e.key === 'ArrowRight') navigateImage(1);
     }
-});
+}
+
+function handleWheel(e) {
+    if (overlay.style.display === 'block') {
+        e.preventDefault();
+        if (e.deltaY > 0) {
+            navigateImage(1);
+        } else {
+            navigateImage(-1);
+        }
+    }
+}
 
 // Initialize the gallery when the DOM is loaded
 document.addEventListener('DOMContentLoaded', createGallery);
